@@ -1,0 +1,126 @@
+@import "node_modules/ol/ol.css";
+
+html,body{
+    margin:0;
+    height:100%
+}
+#map{
+    top:0;
+    bottom:0
+}
+
+#ctl {
+    display:inline;
+}
+
+.userlabel-switch {
+    position: relative;
+    display:inline;
+}
+
+.userlabel-switch button {
+    display: inline;
+}
+
+.lang-switch {
+    position: relative;
+    display:inline;
+}
+.lang-switch button{
+    display: inline;
+}
+
+@media screen and (orientation: portrait) {
+  .map {
+     z-index:0;
+     float: left;
+     width: 100%;
+     height: 50%;
+  }
+
+  .sidepanel {
+     float:right;
+     width: 100%;
+     height: 50%;
+     overflow-x: hidden;
+     overflow-y: scroll;
+     color: white;
+     background:rgba(0,0,0,0.8);
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .sidepanel {
+     float: right;
+     width: 20%;
+     height:100%;
+     overflow-x: hidden;
+     overflow-y: scroll;
+     color: white;
+     background:rgba(0,0,0,0.8);
+  }
+  .map {
+     z-index:0;
+     float: left;
+     width: 80%;
+     height: 100%;
+  }
+}
+
+.userlist {
+   padding: 0px;
+   width: 100%;
+   /*margin: 1em; */
+   margin: 0px;
+   cellspacing:0;
+   border-spacing:0;
+}
+
+.sidepanel a {
+  cursor:pointer;
+}
+
+.sidepanel tr:hover {
+  background: black;
+}
+
+td.person_selected a {
+  font-weight: bold;
+  font-size: x-large;
+  color: green;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+
+tbody tr:nth-child(odd) {
+    background-color: #4C8BF5;
+    background:rgba(0,0,0,0.5);
+}
+
+.colormark {
+  vertical-align: top;
+  font-size:large;
+}
+.rank {
+  vertical-align: top;
+  text-align: right;
+  font-size: medium;
+}
+.unread {
+  vertical-align: top;
+  font-size: medium;
+}
+.name {
+  padding-left: 1em;
+  padding-right: 1em;
+  font-size: large;
+  max-width: 30ch;
+}
+.routepos {
+  vertical-align: top;
+  padding-left: 1em;
+  font-size: large;
+  text-align: right;
+}
+

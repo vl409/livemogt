@@ -1,0 +1,35 @@
+               _                 _       _ __
+    ____ ___  (_)_____________  (_)___  (_) /_
+   / __ `__ \/ / ___/ ___/ __ \/ / __ \/ / __/
+  / / / / / / / /__/ /  / /_/ / / / / / / /_
+ /_/ /_/ /_/_/\___/_/   \____/_/_/ /_/_/\__/
+-----------------------------------------------
+
+The microinit is a minimalistic implementation of init-like program,
+aimed to serve as docker entrypoint, in cases when shell is not
+available or desired.
+
+The lifecycle is simple:
+
+    * spawn processes specified in command line with their arguments
+    * environment is passed as is to the spawned processes
+    * wait until all spawned processes exit
+    * all output goes to stderr
+    * If SIGINT is received (i.e. CTRL-C), send SIGTERM to spawned processes
+
+(Incomplete) list of things microinit does NOT:
+
+    * respawning dead processes
+    * tracking execution time
+    * imposing any kind of restrictions
+    * games with stdio redirection
+    * daemonization
+    * all the tricks init(8) is supposed to do
+
+The program is not trying to be a sofisticated process manager: it is
+not trying to fight all possible pitfals realted to process management,
+like races with PID reuse, fail-proof error handling and so on.
+If you feell like you need this, you may better look at enterprise solutions
+like runc or systemd or whatever.
+
+The goal is to be very simple yet practically usable.

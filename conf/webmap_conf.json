@@ -1,0 +1,6 @@
+{
+    "WebmapListen": ":8234",
+    "Syslog": false,
+    "Stderr": true,
+    "StateFile": "/var/livemogt/people.json"
+}

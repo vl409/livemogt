@@ -1,0 +1,13 @@
+{
+    "Token": "<YOUR-BOT-TOKEN-HERE>",
+    "UpdatePositionURL": "http://127.0.0.1:8234/updatepos",
+    "UpdateStatusURL": "http://127.0.0.1:8234/updatestatus",
+    "LiveMapURL": "https://inspert.ru/livemogt",
+    "Syslog": false,
+    "Stderr": true,
+    "MaxStatus": 128,
+    "StateFile": "/var/livemogt/people.json",
+    "TmpDir": "/var/livemogt",
+    "BotLang": "ru",
+    "RestrictChannelId": <YOUR-NUMERIC-CHANNEL-ID-HERE>
+}
